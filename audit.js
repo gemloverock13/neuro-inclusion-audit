@@ -1,5 +1,5 @@
 /* ============================================================
-   Brain in Hand â€” Neurodivergent Employee Experience Audit
+   Brain in Hand - Neurodivergent Employee Experience Audit
    Questions, scoring & results logic
    ============================================================ */
 
@@ -12,7 +12,7 @@ const SECTIONS = [
       {
         text: 'How confident are you that neurodivergent employees feel they genuinely belong in your organisation?',
         options: [
-          'We have no idea â€” we have never asked',
+          'We have no idea - we have never asked',
           'We suspect many feel like they have to mask or hide who they are',
           'Some feel included but it varies significantly by team or manager',
           'We have strong evidence that ND employees feel valued and visible'
@@ -21,14 +21,14 @@ const SECTIONS = [
       {
         text: 'How openly can neurodivergent employees talk about their condition at work without fear of judgement?',
         options: [
-          'Disclosure feels risky â€” there is no psychological safety around this',
+          'Disclosure feels risky - there is no psychological safety around this',
           'A few individuals feel safe but it is not the norm',
           'Many feel able to disclose but not everyone',
           'Our culture makes it genuinely safe to be open about neurodivergence'
         ]
       },
       {
-        text: 'How well does your organisation celebrate neurodivergent strengths â€” not just manage difficulties?',
+        text: 'How well does your organisation celebrate neurodivergent strengths - not just manage difficulties?',
         options: [
           'We only discuss neurodiversity in the context of problems or adjustments',
           'We acknowledge it occasionally but do not actively celebrate it',
@@ -114,7 +114,7 @@ const SECTIONS = [
       {
         text: 'How confident are your neurodivergent employees that their line manager actually understands their needs?',
         options: [
-          'Most managers have little understanding â€” we hear this from employees',
+          'Most managers have little understanding - we hear this from employees',
           'Understanding varies hugely depending on the manager',
           'Most managers have a basic awareness but lack depth',
           'Our managers are trained, confident and trusted by their ND team members'
@@ -123,7 +123,7 @@ const SECTIONS = [
       {
         text: 'How easy is it for neurodivergent employees to have honest conversations with their manager about how they are really doing?',
         options: [
-          'These conversations rarely happen â€” the relationship does not feel safe',
+          'These conversations rarely happen - the relationship does not feel safe',
           'Some employees have this with their manager, many do not',
           'Most have reasonably open relationships but not all',
           'Honest check-ins are the norm and managers know how to create that space'
@@ -132,7 +132,7 @@ const SECTIONS = [
       {
         text: 'How consistently do managers follow through on support they agree to provide to neurodivergent employees?',
         options: [
-          'Follow-through is poor â€” commitments are often forgotten or deprioritised',
+          'Follow-through is poor - commitments are often forgotten or deprioritised',
           'It depends entirely on the individual manager',
           'Most managers follow through but it is not tracked or accountable',
           'Support commitments are documented, reviewed and owned'
@@ -148,16 +148,16 @@ const SECTIONS = [
       {
         text: 'How quickly can a neurodivergent employee get meaningful support when they are struggling?',
         options: [
-          'There is no clear route â€” they would not know where to turn',
+          'There is no clear route - they would not know where to turn',
           'There is a route but it is slow, unclear or stigmatised',
           'Support is available but can take time or require persistence',
-          'Support is fast, clear and low-barrier â€” employees know exactly what to do'
+          'Support is fast, clear and low-barrier - employees know exactly what to do'
         ]
       },
       {
-        text: 'How well does your organisation support neurodivergent employees in the moment â€” not just in formal reviews?',
+        text: 'How well does your organisation support neurodivergent employees in the moment - not just in formal reviews?',
         options: [
-          'We have no in-the-moment support â€” everything is formal or retrospective',
+          'We have no in-the-moment support - everything is formal or retrospective',
           'There are some informal channels but nothing structured',
           'Managers try to check in but it is inconsistent',
           'Employees have access to support tools and people they can turn to in real time'
@@ -200,10 +200,10 @@ const SECTIONS = [
       {
         text: 'Overall, how would you honestly rate the lived experience of neurodivergent employees in your organisation?',
         options: [
-          'Poor â€” we know they are not well supported and we need to do much more',
-          'Mixed â€” some do well but many are not getting what they need',
-          'Reasonable â€” but we know there are gaps we have not yet addressed',
-          'Strong â€” and we have evidence to back that up'
+          'Poor - we know they are not well supported and we need to do much more',
+          'Mixed - some do well but many are not getting what they need',
+          'Reasonable - but we know there are gaps we have not yet addressed',
+          'Strong - and we have evidence to back that up'
         ]
       }
     ]
@@ -213,27 +213,27 @@ const SECTIONS = [
 const RECOMMENDATIONS = {
   belonging: {
     title: 'Make your workplace genuinely safe to be neurodivergent',
-    body: 'Psychological safety does not happen by accident. If ND employees are masking or staying silent, it signals a cultural problem that policies alone will not fix. Brain in Hand helps employees feel seen and supported on their own terms â€” not just on paper.'
+    body: 'Psychological safety does not happen by accident. If ND employees are masking or staying silent, it signals a cultural problem that policies alone will not fix. Brain in Hand helps employees feel seen and supported on their own terms - not just on paper.'
   },
   daily: {
     title: 'Give ND employees real tools for their day-to-day working life',
-    body: 'Struggling in silence is exhausting and unsustainable. ND employees need practical, personalised tools to manage their workload, environment and energy â€” not just reactive adjustments when things go wrong. Brain in Hand provides that daily structure.'
+    body: 'Struggling in silence is exhausting and unsustainable. ND employees need practical, personalised tools to manage their workload, environment and energy - not just reactive adjustments when things go wrong. Brain in Hand provides that daily structure.'
   },
   needs: {
     title: 'Support employees to understand and communicate their own needs',
     body: 'Many neurodivergent people have never been supported to articulate what they need at work. Brain in Hand helps individuals build that self-awareness and gives them a clear, confident way to communicate it to their employer.'
   },
   managers: {
-    title: 'Build genuine manager capability â€” not just awareness',
+    title: 'Build genuine manager capability - not just awareness',
     body: 'A one-day awareness session is not enough. Managers need ongoing, practical support to hold meaningful conversations with ND team members and follow through consistently. Brain in Hand bridges the gap between manager and employee.'
   },
   support: {
     title: 'Create fast, stigma-free routes to support',
-    body: 'When support is slow, unclear or feels risky to ask for, ND employees cope alone until they cannot. Brain in Hand provides in-the-moment support tools that sit alongside â€” not instead of â€” your existing HR processes.'
+    body: 'When support is slow, unclear or feels risky to ask for, ND employees cope alone until they cannot. Brain in Hand provides in-the-moment support tools that sit alongside - not instead of - your existing HR processes.'
   },
   thriving: {
     title: 'Track whether ND employees are actually staying and progressing',
-    body: 'Inclusion is not just about onboarding â€” it is about whether people can build a career. If you are losing ND employees or they are being overlooked for development, Brain in Hand helps you understand why and what to do about it.'
+    body: 'Inclusion is not just about onboarding - it is about whether people can build a career. If you are losing ND employees or they are being overlooked for development, Brain in Hand helps you understand why and what to do about it.'
   }
 };
 
@@ -347,7 +347,7 @@ function getMaturity(score) {
   if (score < 25) return {
     label: 'Significant gaps',
     bg: '#A32D2D',
-    summary: 'The honest picture is that your neurodivergent employees are likely struggling in ways that are not visible to you. There is meaningful work to do â€” and focused action makes a real difference quickly.'
+    summary: 'The honest picture is that your neurodivergent employees are likely struggling in ways that are not visible to you. There is meaningful work to do - and focused action makes a real difference quickly.'
   };
   if (score < 50) return {
     label: 'Some foundations',
@@ -357,7 +357,7 @@ function getMaturity(score) {
   if (score < 75) return {
     label: 'Making progress',
     bg: '#0F6E56',
-    summary: 'There is genuine commitment here and some strong practice. The focus now is on consistency â€” making sure every ND employee gets a good experience, not just those who are visible or vocal.'
+    summary: 'There is genuine commitment here and some strong practice. The focus now is on consistency - making sure every ND employee gets a good experience, not just those who are visible or vocal.'
   };
   return {
     label: 'Strong practice',
@@ -409,7 +409,7 @@ function renderResults(overall, sectionPcts) {
   html += `
     <div class="cta-card">
       <h3>Ready to make a real difference?</h3>
-      <p>Brain in Hand supports neurodivergent employees with the day-to-day tools, self-awareness and in-the-moment help they need to thrive at work â€” and gives employers the visibility to know it is working.</p>
+      <p>Brain in Hand supports neurodivergent employees with the day-to-day tools, self-awareness and in-the-moment help they need to thrive at work - and gives employers the visibility to know it is working.</p>
       <div class="cta-actions">
         <a href="https://braininhand.co.uk/contact" target="_blank" rel="noopener">
           <button class="btn-cta">Book a demo &rarr;</button>
