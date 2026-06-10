@@ -1,209 +1,209 @@
 /* ============================================================
-   Brain in Hand — Neuro-Inclusion Audit Tool
-   Audit logic, scoring & results
+   Brain in Hand â€” Neurodivergent Employee Experience Audit
+   Questions, scoring & results logic
    ============================================================ */
 
 const SECTIONS = [
   {
-    id: 'culture',
-    name: 'Culture & awareness',
+    id: 'belonging',
+    name: 'Visibility & belonging',
     color: '#8E3CCE',
     questions: [
       {
-        text: 'How well does your organisation understand the range of neurodivergent conditions (e.g. ADHD, autism, dyslexia, dyspraxia, dyscalculia)?',
+        text: 'How confident are you that neurodivergent employees feel they genuinely belong in your organisation?',
         options: [
-          'We have no formal understanding — it\'s not on our radar',
-          'Some individuals are aware but it isn\'t an organisational priority',
-          'There is general awareness but no structured approach',
-          'We have training programmes and a clear organisational understanding'
+          'We have no idea â€” we have never asked',
+          'We suspect many feel like they have to mask or hide who they are',
+          'Some feel included but it varies significantly by team or manager',
+          'We have strong evidence that ND employees feel valued and visible'
         ]
       },
       {
-        text: 'How visible is neurodiversity as a topic in your workplace culture?',
+        text: 'How openly can neurodivergent employees talk about their condition at work without fear of judgement?',
         options: [
-          'It is never discussed',
-          'It occasionally comes up informally',
-          'It is discussed during awareness events (e.g. Neurodiversity Celebration Week)',
-          'It is embedded in our culture year-round with active networks or champions'
+          'Disclosure feels risky â€” there is no psychological safety around this',
+          'A few individuals feel safe but it is not the norm',
+          'Many feel able to disclose but not everyone',
+          'Our culture makes it genuinely safe to be open about neurodivergence'
         ]
       },
       {
-        text: 'How does your leadership talk about neurodiversity?',
+        text: 'How well does your organisation celebrate neurodivergent strengths â€” not just manage difficulties?',
         options: [
-          'It is not mentioned by leaders',
-          'Leaders acknowledge it only when required to',
-          'Leaders are broadly supportive but not outspoken',
-          'Leaders actively champion it and share personal commitments'
+          'We only discuss neurodiversity in the context of problems or adjustments',
+          'We acknowledge it occasionally but do not actively celebrate it',
+          'We try to recognise strengths but it is not consistent',
+          'We actively recognise and leverage the strengths ND employees bring'
         ]
       }
     ]
   },
   {
-    id: 'recruitment',
-    name: 'Recruitment & onboarding',
+    id: 'daily',
+    name: 'Day-to-day working life',
     color: '#7EDEC8',
     questions: [
       {
-        text: 'How accessible is your recruitment process for neurodivergent candidates?',
+        text: 'How well can your neurodivergent employees manage their workload and daily demands without becoming overwhelmed?',
         options: [
-          'We have not considered this',
-          'We offer adjustments only if a candidate asks',
-          'We proactively offer adjustments at each stage',
-          'Our entire process is designed with neuro-inclusion from the start'
+          'Many struggle significantly and we are aware of this',
+          'Some cope but we know others find it very hard',
+          'Most manage reasonably well but support is reactive',
+          'We proactively help ND employees structure their work in ways that work for them'
         ]
       },
       {
-        text: 'How are your job descriptions written?',
+        text: 'How easy is it for neurodivergent employees to adapt their working environment to suit their needs?',
         options: [
-          'They use complex language and long lists of requirements',
-          'We try to keep them clear but have no formal standard',
-          'We use plain language and review for accessibility',
-          'They are co-created with neurodiverse input and regularly reviewed'
+          'They are expected to work the same way as everyone else',
+          'They can ask for changes but the process is slow or difficult',
+          'Reasonable adjustments are available and reasonably accessible',
+          'Employees have genuine autonomy to shape how and where they work'
         ]
       },
       {
-        text: 'How does your onboarding process support neurodivergent new starters?',
+        text: 'How confident are you that neurodivergent employees are not burning out trying to mask or cope alone?',
         options: [
-          'It is the same for everyone with no flexibility',
-          'Adjustments are made if a new starter discloses a need',
-          'We have a structured check-in process to identify support needs early',
-          'Onboarding is personalised and proactively designed to be inclusive'
+          'We have real concerns about this but feel unsure how to address it',
+          'We suspect some are struggling but we do not have visibility',
+          'We check in but our insight is limited to what people tell us directly',
+          'We have good visibility and early warning systems to spot when people are struggling'
         ]
       }
     ]
   },
   {
-    id: 'management',
-    name: 'Management practices',
+    id: 'needs',
+    name: 'Understanding their needs',
     color: '#FFC962',
     questions: [
       {
-        text: 'How equipped are your line managers to support neurodivergent employees?',
+        text: 'How well supported are your neurodivergent employees in understanding their own support needs at work?',
         options: [
-          'They have no specific training on this',
-          'Some managers have sought training independently',
-          'We provide general neurodiversity awareness training to managers',
-          'Managers receive structured, ongoing training and access to specialist support'
+          'They are largely left to figure it out themselves',
+          'Some have received guidance but most have not',
+          'We signpost resources but do not actively support self-awareness',
+          'We actively help ND employees understand what works for them and why'
         ]
       },
       {
-        text: 'How are performance standards and expectations communicated to employees?',
+        text: 'How easy is it for neurodivergent employees to communicate what they need in a way that gets results?',
         options: [
-          'Verbally and inconsistently',
-          'In writing but not always clearly',
-          'In clear written formats with check-ins to confirm understanding',
-          'Tailored to the individual, with multiple formats and regular review'
+          'Many struggle to articulate their needs and do not know how to ask',
+          'Some can advocate for themselves but others cannot',
+          'Most can ask for what they need but the response is inconsistent',
+          'Employees have clear, low-barrier ways to communicate needs and know they will be heard'
         ]
       },
       {
-        text: 'How do managers respond when an employee discloses a neurodivergent condition?',
+        text: 'How prepared are your neurodivergent employees to manage difficult or unpredictable situations at work?',
         options: [
-          'There is no standard approach — it varies by manager',
-          'Managers try to help but often don\'t know what to do',
-          'There is a process in place and managers follow it',
-          'Managers are confident, trained, and have a clear support pathway to follow'
+          'They are largely unprepared and we see this causing problems',
+          'Some are resilient but others are frequently derailed',
+          'Most cope reasonably well but we have limited visibility',
+          'We help ND employees build strategies and tools to navigate uncertainty'
         ]
       }
     ]
   },
   {
-    id: 'environment',
-    name: 'Environment & flexibility',
+    id: 'managers',
+    name: 'Manager relationships',
     color: '#EAC1FF',
     questions: [
       {
-        text: 'How well does your physical workplace accommodate sensory differences?',
+        text: 'How confident are your neurodivergent employees that their line manager actually understands their needs?',
         options: [
-          'We have not considered sensory needs',
-          'We have some flexibility (e.g. remote working) but nothing specific in the office',
-          'We have quiet spaces and some sensory considerations in place',
-          'Sensory needs are a core part of our workspace design strategy'
+          'Most managers have little understanding â€” we hear this from employees',
+          'Understanding varies hugely depending on the manager',
+          'Most managers have a basic awareness but lack depth',
+          'Our managers are trained, confident and trusted by their ND team members'
         ]
       },
       {
-        text: 'How flexible is your organisation around where and when people work?',
+        text: 'How easy is it for neurodivergent employees to have honest conversations with their manager about how they are really doing?',
         options: [
-          'We expect everyone in the office, fixed hours',
-          'Some flexibility exists but it is not consistently available',
-          'Flexible working is available for those who request it',
-          'Flexible working is the norm and actively encouraged for all'
+          'These conversations rarely happen â€” the relationship does not feel safe',
+          'Some employees have this with their manager, many do not',
+          'Most have reasonably open relationships but not all',
+          'Honest check-ins are the norm and managers know how to create that space'
         ]
       },
       {
-        text: 'What tools or technology do you provide to support neurodivergent employees?',
+        text: 'How consistently do managers follow through on support they agree to provide to neurodivergent employees?',
         options: [
-          'Standard tools only — no additional provision',
-          'Additional tools are available but only if requested',
-          'We have a list of assistive tools available and communicate this',
-          'We proactively assess needs and fund tools as standard practice'
+          'Follow-through is poor â€” commitments are often forgotten or deprioritised',
+          'It depends entirely on the individual manager',
+          'Most managers follow through but it is not tracked or accountable',
+          'Support commitments are documented, reviewed and owned'
         ]
       }
     ]
   },
   {
-    id: 'policies',
-    name: 'Policies & adjustments',
+    id: 'support',
+    name: 'Getting support',
     color: '#8E3CCE',
     questions: [
       {
-        text: 'How does your organisation approach reasonable adjustments for neurodivergent employees?',
+        text: 'How quickly can a neurodivergent employee get meaningful support when they are struggling?',
         options: [
-          'We are unaware of our legal obligations',
-          'We make adjustments reactively when issues arise',
-          'We have a process but it can be slow or inconsistent',
-          'We have a fast, well-communicated and proactive adjustments process'
+          'There is no clear route â€” they would not know where to turn',
+          'There is a route but it is slow, unclear or stigmatised',
+          'Support is available but can take time or require persistence',
+          'Support is fast, clear and low-barrier â€” employees know exactly what to do'
         ]
       },
       {
-        text: 'Are neuro-inclusion considerations embedded in your HR policies?',
+        text: 'How well does your organisation support neurodivergent employees in the moment â€” not just in formal reviews?',
         options: [
-          'No — policies are not reviewed with this lens',
-          'Some policies mention disability but not neurodiversity specifically',
-          'Neurodiversity is referenced in key policies',
-          'All people policies are reviewed through a neuro-inclusion framework'
+          'We have no in-the-moment support â€” everything is formal or retrospective',
+          'There are some informal channels but nothing structured',
+          'Managers try to check in but it is inconsistent',
+          'Employees have access to support tools and people they can turn to in real time'
         ]
       },
       {
-        text: 'How do you measure the impact of adjustments you put in place?',
+        text: 'How confident are your neurodivergent employees that asking for help will not be held against them?',
         options: [
-          'We do not measure this',
-          'We check in informally after an adjustment is made',
-          'We have a review process to assess whether adjustments are working',
-          'We gather data and use it to improve our approach organisation-wide'
+          'We have real concerns that asking for help feels risky',
+          'Some trust the system but others do not',
+          'Most feel reasonably safe asking but it is not universal',
+          'Our culture makes asking for help a sign of strength, not weakness'
         ]
       }
     ]
   },
   {
-    id: 'voice',
-    name: 'Employee voice',
+    id: 'thriving',
+    name: 'Staying & thriving',
     color: '#7EDEC8',
     questions: [
       {
-        text: 'How safe do neurodivergent employees feel disclosing their condition at work?',
+        text: 'How well are your neurodivergent employees progressing and developing in their careers?',
         options: [
-          'We have no sense of this — it has never been assessed',
-          'We believe it is safe but have no evidence',
-          'We have gathered some data through engagement surveys',
-          'We have strong evidence of psychological safety and disclosure rates are tracked'
+          'We suspect ND employees are held back but have not examined this',
+          'We have anecdotal concerns but no data',
+          'We try to support career development but it is not ND-specific',
+          'We actively track and support the career progression of ND employees'
         ]
       },
       {
-        text: 'How are neurodivergent employees involved in shaping workplace practices?',
+        text: 'How confident are you that neurodivergent employees are not leaving because of poor support?',
         options: [
-          'They are not specifically included in this way',
-          'We welcome feedback but do not actively seek it',
-          'We have some mechanisms (e.g. surveys) to gather their input',
-          'Neurodivergent employees co-design and review our policies and practices'
+          'We believe this is happening and it is a problem we have not addressed',
+          'We suspect it is a factor but lack the data to be sure',
+          'We try to gather exit data but it is hard to attribute',
+          'We actively monitor retention of ND employees and act on what we find'
         ]
       },
       {
-        text: 'What does your organisation do with feedback from neurodivergent employees?',
+        text: 'Overall, how would you honestly rate the lived experience of neurodivergent employees in your organisation?',
         options: [
-          'We do not collect it formally',
-          'We collect it but action is limited',
-          'Feedback informs specific improvements',
-          'Feedback directly shapes strategy and there is visible accountability for change'
+          'Poor â€” we know they are not well supported and we need to do much more',
+          'Mixed â€” some do well but many are not getting what they need',
+          'Reasonable â€” but we know there are gaps we have not yet addressed',
+          'Strong â€” and we have evidence to back that up'
         ]
       }
     ]
@@ -211,29 +211,29 @@ const SECTIONS = [
 ];
 
 const RECOMMENDATIONS = {
-  culture: {
-    title: 'Build a baseline of neurodiversity awareness',
-    body: 'Start with structured awareness training for all staff, not just managers. Create visible touchpoints — a resource hub, a lunch and learn series, or a neurodiversity network — to signal that this is a genuine priority.'
+  belonging: {
+    title: 'Make your workplace genuinely safe to be neurodivergent',
+    body: 'Psychological safety does not happen by accident. If ND employees are masking or staying silent, it signals a cultural problem that policies alone will not fix. Brain in Hand helps employees feel seen and supported on their own terms â€” not just on paper.'
   },
-  recruitment: {
-    title: 'Audit and redesign your recruitment process',
-    body: 'Review every stage of your hiring process for accessibility. Proactively offer adjustments, simplify job descriptions, and ensure interviewers are trained to accommodate different communication styles.'
+  daily: {
+    title: 'Give ND employees real tools for their day-to-day working life',
+    body: 'Struggling in silence is exhausting and unsustainable. ND employees need practical, personalised tools to manage their workload, environment and energy â€” not just reactive adjustments when things go wrong. Brain in Hand provides that daily structure.'
   },
-  management: {
-    title: 'Invest in manager capability on neuro-inclusion',
-    body: 'Line managers are the single biggest factor in an employee\'s experience. Provide structured training, clear guidance on adjustments, and access to specialist support so managers feel confident rather than uncertain.'
+  needs: {
+    title: 'Support employees to understand and communicate their own needs',
+    body: 'Many neurodivergent people have never been supported to articulate what they need at work. Brain in Hand helps individuals build that self-awareness and gives them a clear, confident way to communicate it to their employer.'
   },
-  environment: {
-    title: 'Design your environment around cognitive diversity',
-    body: 'Audit your physical and digital environment. Introduce quiet spaces, flexible working as a default, and a clear toolkit of assistive technologies that all employees can access — not just those who ask.'
+  managers: {
+    title: 'Build genuine manager capability â€” not just awareness',
+    body: 'A one-day awareness session is not enough. Managers need ongoing, practical support to hold meaningful conversations with ND team members and follow through consistently. Brain in Hand bridges the gap between manager and employee.'
   },
-  policies: {
-    title: 'Embed neuro-inclusion into your people policies',
-    body: 'Review your policies through a neuro-inclusion lens. Establish a fast, transparent adjustments process and measure outcomes — not just whether adjustments were made, but whether they\'re working.'
+  support: {
+    title: 'Create fast, stigma-free routes to support',
+    body: 'When support is slow, unclear or feels risky to ask for, ND employees cope alone until they cannot. Brain in Hand provides in-the-moment support tools that sit alongside â€” not instead of â€” your existing HR processes.'
   },
-  voice: {
-    title: 'Create genuine channels for neurodivergent voices',
-    body: 'Psychological safety doesn\'t happen by accident. Measure disclosure rates, gather feedback directly from neurodivergent employees, and show visible action in response. Co-design, don\'t just consult.'
+  thriving: {
+    title: 'Track whether ND employees are actually staying and progressing',
+    body: 'Inclusion is not just about onboarding â€” it is about whether people can build a career. If you are losing ND employees or they are being overlooked for development, Brain in Hand helps you understand why and what to do about it.'
   }
 };
 
@@ -268,11 +268,10 @@ function startAudit() {
 function renderQuestion(idx) {
   const q = allQuestions[idx];
   const total = allQuestions.length;
-  const pct = Math.round((idx / total) * 100);
 
   document.getElementById('section-tag').textContent = q.sectionName;
-  document.getElementById('q-count').textContent = `${idx + 1} of ${total}`;
-  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('q-count').textContent = (idx + 1) + ' of ' + total;
+  document.getElementById('progress-fill').style.width = Math.round((idx / total) * 100) + '%';
   document.getElementById('q-text').textContent = q.text;
 
   const container = document.getElementById('options');
@@ -317,7 +316,6 @@ function goBack() {
   }
 }
 
-// --- Scoring ---
 function buildResults() {
   const sectionScores = {};
   SECTIONS.forEach(s => { sectionScores[s.id] = { total: 0, count: 0 }; });
@@ -346,25 +344,38 @@ function buildResults() {
 }
 
 function getMaturity(score) {
-  if (score < 25) return { label: 'Starting out', bg: '#A63232', text: '#fff', summary: 'Neuro-inclusion is largely absent from your current practices. There are significant opportunities to build awareness, processes and support structures that will benefit your whole workforce.' };
-  if (score < 50) return { label: 'Developing',   bg: '#8A5F00', text: '#fff', summary: 'You have some foundations in place but neuro-inclusion is patchy across the organisation. Formalising your approach and upskilling your people will make a meaningful difference.' };
-  if (score < 75) return { label: 'Progressing',  bg: '#1D7F6E', text: '#fff', summary: 'Good progress — you have visible commitments and some strong practices. The focus now is on consistency, proactivity, and embedding inclusion into everyday processes.' };
-  return           { label: 'Leading',       bg: '#5B2199', text: '#fff', summary: 'Your workplace shows strong neuro-inclusive practice. The opportunity is to deepen impact, share learning across the organisation, and set the standard for others.' };
+  if (score < 25) return {
+    label: 'Significant gaps',
+    bg: '#A32D2D',
+    summary: 'The honest picture is that your neurodivergent employees are likely struggling in ways that are not visible to you. There is meaningful work to do â€” and focused action makes a real difference quickly.'
+  };
+  if (score < 50) return {
+    label: 'Some foundations',
+    bg: '#854F0B',
+    summary: 'You have good intentions and some things are working, but ND employees\' day-to-day experience is likely inconsistent. Closing these gaps will improve retention, performance and wellbeing significantly.'
+  };
+  if (score < 75) return {
+    label: 'Making progress',
+    bg: '#0F6E56',
+    summary: 'There is genuine commitment here and some strong practice. The focus now is on consistency â€” making sure every ND employee gets a good experience, not just those who are visible or vocal.'
+  };
+  return {
+    label: 'Strong practice',
+    bg: '#533AB7',
+    summary: 'Your organisation is doing well by its neurodivergent employees. The opportunity is to deepen that, share what is working, and make your approach a genuine competitive advantage in attracting ND talent.'
+  };
 }
 
 function renderResults(overall, sectionPcts) {
   const maturity = getMaturity(overall);
-
-  // Sort sections to find lowest scorers for recommendations
   const sortedSections = [...SECTIONS].sort((a, b) => sectionPcts[a.id] - sectionPcts[b.id]);
 
   let html = `
     <div class="score-hero">
       <div class="score-number">${overall}%</div>
-      <span class="maturity-badge" style="background:${maturity.bg};color:${maturity.text}">${maturity.label}</span>
+      <span class="maturity-badge" style="background:${maturity.bg};color:#fff">${maturity.label}</span>
       <p class="score-summary">${maturity.summary}</p>
     </div>
-
     <div class="pillars-grid">
   `;
 
@@ -397,8 +408,8 @@ function renderResults(overall, sectionPcts) {
 
   html += `
     <div class="cta-card">
-      <h3>Want to know how to close these gaps?</h3>
-      <p>Brain in Hand gives HR teams the tools, training and frameworks to build genuinely neuro-inclusive workplaces — from day one of recruitment through to ongoing employee support.</p>
+      <h3>Ready to make a real difference?</h3>
+      <p>Brain in Hand supports neurodivergent employees with the day-to-day tools, self-awareness and in-the-moment help they need to thrive at work â€” and gives employers the visibility to know it is working.</p>
       <div class="cta-actions">
         <a href="https://braininhand.co.uk/contact" target="_blank" rel="noopener">
           <button class="btn-cta">Book a demo &rarr;</button>
