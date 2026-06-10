@@ -1,6 +1,6 @@
-# Neuro-Inclusion Workplace Audit Tool
+# Neurodivergent Employee Experience Audit
 
-A free, browser-based self-assessment tool that helps HR teams understand how neuro-inclusive their organisation is across six key areas.
+A free, browser-based audit tool that helps HR teams honestly assess the day-to-day lived experience of neurodivergent employees in their organisation — not just whether policies exist, but whether they actually work for real people.
 
 Built by [Brain in Hand](https://braininhand.co.uk).
 
@@ -8,82 +8,61 @@ Built by [Brain in Hand](https://braininhand.co.uk).
 
 ## What it does
 
-- 18 questions across 6 pillars of neuro-inclusion
-- Scores each pillar independently and produces an overall maturity rating
-- Generates prioritised recommendations based on lowest-scoring areas
-- **100% client-side** — no data is stored, tracked or sent anywhere
+18 questions across 6 pillars, each scored 0–3. Results show an overall maturity rating, a breakdown by pillar, and the top 3 priority recommendations — each linked directly to what Brain in Hand does.
+
+Everything runs in the browser. No data is stored, tracked or sent anywhere.
 
 ## The six pillars
 
-1. Culture & awareness
-2. Recruitment & onboarding
-3. Management practices
-4. Environment & flexibility
-5. Policies & adjustments
-6. Employee voice
+1. Visibility & belonging
+2. Day-to-day working life
+3. Understanding their needs
+4. Manager relationships
+5. Getting support
+6. Staying & thriving
 
 ## Maturity ratings
 
 | Score | Level |
 |-------|-------|
-| 0–24% | Starting out |
-| 25–49% | Developing |
-| 50–74% | Progressing |
-| 75–100% | Leading |
+| 0–24% | Significant gaps |
+| 25–49% | Some foundations |
+| 50–74% | Making progress |
+| 75–100% | Strong practice |
 
 ---
 
-## How to use
+## Hosting on GitHub Pages
 
-### Share via GitHub Pages
-
-1. Fork or clone this repository into your own GitHub account
+1. Upload all four files to your GitHub repository
 2. Go to **Settings → Pages**
-3. Set source to `main` branch, `/ (root)` folder
-4. Save — GitHub will give you a public URL like `https://yourusername.github.io/neuro-inclusion-audit`
-5. Share that link with employers
-
-### Run locally
-
-No build step needed. Just open `index.html` in a browser, or serve with any static server:
-
-```bash
-npx serve .
-# or
-python3 -m http.server 8080
-```
+3. Set source to `main` branch, `/ (root)` folder, click **Save**
+4. Your live URL will appear as: `https://yourusername.github.io/your-repo-name`
 
 ---
 
 ## Customisation
 
-### Update the demo booking link
-
-In `audit.js`, find the CTA section near the bottom and update the URL:
-
+### Demo booking link
+In `audit.js`, find the CTA near the bottom and update:
 ```js
-<a href="https://braininhand.co.uk/contact" ...>
+href="https://braininhand.co.uk/contact"
 ```
 
-Replace with your actual booking or contact page URL.
+### Questions
+All questions are in the `SECTIONS` array at the top of `audit.js`. Each option is scored 0–3 by position (0 = least inclusive, 3 = most inclusive).
 
-### Update questions or scoring
-
-All questions and section definitions are in the `SECTIONS` array at the top of `audit.js`. Each option is scored 0–3 (index position), where 0 = least inclusive and 3 = most inclusive.
-
-### Branding
-
-Colours are defined as CSS custom properties at the top of `style.css`:
-
+### Brand colours
+Defined as CSS variables at the top of `style.css`:
 ```css
 :root {
-  --bih-deep:    #1B002E;
-  --bih-purple:  #8E3CCE;
-  --bih-lilac:   #EAC1FF;
-  --bih-pale:    #F5EAF9;
-  --bih-mint:    #7EDEC8;
-  --bih-yellow:  #FFC962;
-  --bih-cream:   #FAF9F5;
+  --bih-deep:   #1B002E;
+  --bih-purple: #8E3CCE;
+  --bih-lilac:  #EAC1FF;
+  --bih-pale:   #F5EAF9;
+  --bih-mint:   #7EDEC8;
+  --bih-yellow: #FFC962;
+  --bih-cream:  #FAF9F5;
 }
 ```
 
@@ -93,21 +72,20 @@ Colours are defined as CSS custom properties at the top of `style.css`:
 
 ```
 /
-├── index.html     # Main HTML shell
-├── style.css      # All styles and Brain in Hand brand tokens
-├── audit.js       # Questions, scoring logic, results rendering
-└── README.md      # This file
+├── index.html   — page structure
+├── style.css    — Brain in Hand brand styles
+├── audit.js     — questions, scoring, results
+└── README.md    — this file
 ```
 
 ---
 
 ## Privacy
 
-This tool collects no data. All processing happens in the user's browser. There is no backend, no analytics, no cookies, and no database. It is safe to share with employers who may be concerned about sensitive self-assessment data leaving their organisation.
+No data is collected. All processing happens in the user's browser. No backend, no analytics, no cookies, no database.
 
 ---
 
 ## Licence
 
-&copy; Brain in Hand. All rights reserved.  
-This tool may be shared freely for the purpose of employer engagement. It may not be modified or redistributed under a different brand without permission.
+&copy; Brain in Hand. All rights reserved.
